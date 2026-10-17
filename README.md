@@ -26,3 +26,7 @@ Mobile-first static website prototype inspired by premium editorial gallery layo
 - Reporting is not connected to a backend; saved items stay in the current browser.
 - GitHub Pages is static hosting and does not provide secure accounts, moderation workflows, or a database.
 - Review GitHub's current policies and applicable laws before publishing adult-oriented content.
+
+
+## Supplied image assets
+Three image files supplied in this conversation are included in `assets/` and displayed in the first three gallery cards. Confirm you hold the necessary copyright, distribution rights, and adult performer consent/authorization before publishing them publicly.

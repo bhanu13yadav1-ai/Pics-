@@ -1,33 +1,96 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b090b">
-<meta name="description" content="PornPicks — a premium adult-only gallery discovery demo.">
-<title>PornPicks — The Premium Gallery</title><link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b090b">
+  <meta name="description" content="PornPicks — a premium, age-gated gallery discovery demo.">
+  <title>PornPicks — Discover Your Next Favourite</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="age-gate" id="ageGate" role="dialog" aria-modal="true" aria-labelledby="ageTitle"><div class="age-panel">
-<a class="brand brand-large" href="#"><span class="brand-mark">P</span> Porn<span>Picks</span></a><div class="eyebrow">18+ ONLY · AGE CONFIRMATION</div><h1 id="ageTitle">A more considered way to discover.</h1>
-<p>This website demo is intended only for adults aged 18 or older. Continue only if you are legally allowed to view adult-oriented content in your location.</p><div class="age-actions"><button class="btn primary" id="confirmAge">I am 18 or older</button><button class="btn quiet" id="leaveSite">Leave this site</button></div><small>This front-end confirmation is not robust legal age verification.</small>
-</div></div>
-<header class="header"><a class="brand" href="#home"><span class="brand-mark">P</span> Porn<span>Picks</span></a>
-<nav class="nav"><a href="#home" class="nav-link active">Discover</a><a href="#stars" class="nav-link">Stars</a><a href="#collections" class="nav-link">Collections</a></nav>
-<div class="head-actions"><button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button><button class="saved-shortcut" id="savedBtn">♡ <span>Saved</span></button><button class="icon-btn menu-toggle" id="menuBtn" aria-label="Open menu">☰</button></div></header>
-<div class="mobile-menu hidden" id="mobileMenu"><a href="#home">Discover</a><a href="#stars">Popular Stars</a><a href="#collections">Collections</a><a href="#safety">Safety & reporting</a></div>
-<main id="home">
-<section class="hero"><div class="hero-copy"><div class="eyebrow"><span class="dot"></span> THE PREMIUM GALLERY EXPERIENCE</div><h1>Discover more.<br><em>Set your own taste.</em></h1><p>A refined, mobile-first way to explore profiles and collections. Find a vibe, browse thoughtfully, and save your favourites.</p><div class="hero-actions"><a class="btn primary" href="#stars">Explore stars <span>↗</span></a><a class="text-link" href="#collections">Browse collections →</a></div><div class="hero-note"><span class="spark">✦</span><span><b>Made for adult audiences</b><small>Original design · Mobile-first · Curated discovery</small></span></div></div>
-<div class="hero-art"><div class="orb orb1"></div><div class="orb orb2"></div><div class="art-label"><small>PORNPICKS / EDITION 01</small><strong>THE<br>COLLECTION</strong><span>DISCOVER YOUR NEXT FAVOURITE</span></div><div class="art-stamp">THE EDIT <b>✦</b></div></div></section>
-<section class="quick-stats"><div><b>Profiles</b><span>Discover people & collections</span></div><div><b>Smart filters</b><span>Find the category you want</span></div><div><b>Saved locally</b><span>Your picks stay on this device</span></div></section>
-<section class="section" id="stars"><div class="section-head"><div><div class="eyebrow">PEOPLE TO DISCOVER</div><h2>Popular stars</h2><p class="sub">Profile cards use original placeholders until licensed profile artwork is added.</p></div><a class="text-link" href="#collections">Explore all →</a></div>
-<div class="toolbar"><label class="search-field"><span>⌕</span><input id="starSearch" type="search" placeholder="Search star names…" aria-label="Search stars"></label><select id="starSort" aria-label="Sort stars"><option value="popular">Most popular</option><option value="az">Name A–Z</option><option value="collections">Most collections</option></select></div>
-<div class="star-grid" id="starGrid"></div><div class="empty hidden" id="starEmpty">No profiles match that search.</div></section>
-<section class="section collections-section" id="collections"><div class="section-head"><div><div class="eyebrow">FIND YOUR VIBE</div><h2>Explore collections</h2><p class="sub">Editorial-style demo collections with original artwork treatments.</p></div></div>
-<div class="filters" id="filters"><button class="filter active" data-category="All">All picks</button><button class="filter" data-category="Editorial">Editorial</button><button class="filter" data-category="Portraits">Portraits</button><button class="filter" data-category="Lifestyle">Lifestyle</button><button class="filter" data-category="Artful">Artful</button></div>
-<div class="collection-grid" id="collectionGrid"></div><div class="empty hidden" id="collectionEmpty">No collections found. Try a different filter or search.</div></section>
-<section class="banner"><div><div class="eyebrow">THE PORNPICKS STANDARD</div><h2>Less clutter.<br><em>More discovery.</em></h2><p>Premium visual hierarchy, fast navigation and a browsing experience built for your phone.</p></div><div class="benefits"><div><i>01</i><span><b>Made for mobile</b><small>Thumb-friendly controls and responsive cards.</small></span></div><div><i>02</i><span><b>Your picks, your device</b><small>Favourites are stored locally in this demo.</small></span></div><div><i>03</i><span><b>Consent comes first</b><small>Publish only lawful, licensed adult content.</small></span></div></div></section>
-<section class="safety" id="safety"><div class="safety-icon">✓</div><div class="safety-copy"><div class="eyebrow">SAFETY & TRUST</div><h2>Consent is non-negotiable.</h2><p>Only publish lawful, licensed content featuring consenting adults aged 18+. Never publish non-consensual imagery, hidden-camera content, or anyone under 18. This demo's report form does not transmit reports to a server.</p></div><button class="btn outline" id="reportBtn">Report a concern</button></section>
-</main>
-<footer class="footer"><a class="brand" href="#home"><span class="brand-mark">P</span> Porn<span>Picks</span></a><span>Independent demo · Not affiliated with PornPics</span><div><a href="#stars">Stars</a><a href="#collections">Collections</a><button id="footerReport">Report content</button></div><small>Demo only. Replace placeholders with properly licensed content and connect reporting before production.</small></footer>
-<div class="modal-backdrop hidden" id="profileModal" role="dialog" aria-modal="true" aria-labelledby="profileTitle"><div class="modal profile-modal"><button class="modal-close" data-close="profileModal" aria-label="Close">×</button><div class="profile-hero" id="profileHero"><span id="profileInitial">P</span></div><div class="eyebrow">STAR PROFILE · DEMO</div><h2 id="profileTitle">Profile</h2><p id="profileDescription"></p><div class="profile-stats"><span><b id="profileCount">0</b><small>Collections</small></span><span><b>18+</b><small>Adults only</small></span></div><h3>Featured collections</h3><div id="profileCollections" class="profile-collections"></div><small class="disclaimer">Names are sample profile labels only. No affiliation or endorsement is implied.</small></div></div>
-<div class="modal-backdrop hidden" id="reportModal" role="dialog" aria-modal="true" aria-labelledby="reportTitle"><form class="modal" id="reportForm"><button type="button" class="modal-close" data-close="reportModal" aria-label="Close">×</button><div class="eyebrow">SAFETY & TRUST</div><h2 id="reportTitle">Report a concern</h2><p>Choose a reason. This demo shows a local confirmation only; it does not send the report.</p><label for="reportType">Reason</label><select id="reportType" required><option value="">Select a reason</option><option>Copyright or ownership</option><option>Consent or privacy concern</option><option>Underage content concern</option><option>Broken or misleading content</option><option>Other safety issue</option></select><label for="reportDetails">Details (optional)</label><textarea id="reportDetails" maxlength="500" rows="3" placeholder="Describe the issue without sharing personal information."></textarea><button class="btn primary full" type="submit">Submit demo report</button><div id="reportMessage" class="form-message" role="status"></div></form></div>
-<div class="toast" id="toast" role="status" aria-live="polite"></div><script src="app.js" defer></script></body></html>
+  <div class="age-gate" id="ageGate" role="dialog" aria-modal="true" aria-labelledby="ageTitle">
+    <div class="age-panel">
+      <div class="brand brand-large"><span class="brand-mark">P</span> Porn<span>Picks</span></div>
+      <div class="eyebrow">18+ ONLY · PLEASE CONFIRM YOUR AGE</div>
+      <h1 id="ageTitle">An adults-only experience.</h1>
+      <p>This demo is intended only for adults aged 18 or older. Continue only if you are legally allowed to view adult-oriented websites where you live.</p>
+      <div class="age-actions">
+        <button class="btn btn-primary" id="confirmAge">I am 18 or older</button>
+        <button class="btn btn-quiet" id="leaveSite">I am under 18</button>
+      </div>
+      <small>Age confirmation in this demo is a front-end gate, not legally robust age verification.</small>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="PornPicks home"><span class="brand-mark">P</span> Porn<span>Picks</span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a class="active" href="#home">Discover</a><a href="#collections">Collections</a><a href="#new">New picks</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="openSearch" aria-label="Focus search">⌕</button>
+      <button class="avatar-button" id="savedShortcut" aria-label="Show saved picks">♡ <span>Saved</span></button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> THE PREMIUM GALLERY EXPERIENCE</div>
+        <h1>Curated picks.<br><em>Elevated taste.</em></h1>
+        <p>A cleaner way to discover collections. Explore handpicked editorial demos, save favourites, and find your next collection.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#collections">Explore collections <span>↗</span></a><a class="text-link" href="#new">See what’s new <span>→</span></a></div>
+        <div class="hero-proof"><span class="proof-icon">✦</span><span><b>Designed for adults</b><small>Privacy-minded · Mobile-first · Curated</small></span></div>
+      </div>
+      <div class="hero-art" aria-label="Abstract editorial artwork">
+        <div class="art-glow"></div><div class="art-ring ring-one"></div><div class="art-ring ring-two"></div>
+        <div class="art-caption"><span>VOL. 01</span><b>THE EDIT</b><span>CURATED COLLECTIONS</span></div>
+        <div class="art-chip">PICK OF THE DAY <b>✦</b></div>
+      </div>
+    </section>
+
+    <section class="stats-strip" aria-label="Site highlights">
+      <div><b>Curated</b><span>Collection-first discovery</span></div><div><b>Fast</b><span>Lightweight static build</span></div><div><b>Private by design</b><span>Saved picks stay on this device</span></div>
+    </section>
+
+    <section class="section" id="collections">
+      <div class="section-heading"><div><div class="eyebrow">FIND YOUR VIBE</div><h2>Explore collections</h2></div><span class="section-note">A better way to browse</span></div>
+      <div class="category-row" id="categoryRow" role="group" aria-label="Filter by category">
+        <button class="filter-pill selected" data-category="All">All picks</button>
+        <button class="filter-pill" data-category="Editorial">Editorial</button>
+        <button class="filter-pill" data-category="Portraits">Portraits</button>
+        <button class="filter-pill" data-category="Lifestyle">Lifestyle</button>
+        <button class="filter-pill" data-category="Artful">Artful</button>
+      </div>
+      <div class="gallery-grid" id="galleryGrid" aria-live="polite"></div>
+      <div class="empty-state hidden" id="emptyState">No collections match your search. Try another keyword.</div>
+    </section>
+
+    <section class="feature-banner" id="new">
+      <div><div class="eyebrow">THE PORNPICKS STANDARD</div><h2>Less clutter.<br><em>More discovery.</em></h2><p>Thoughtful design, quick navigation, and a gallery that feels great on your phone.</p></div>
+      <div class="feature-list"><div><span>01</span><b>Made for mobile</b><small>Responsive cards and thumb-friendly controls.</small></div><div><span>02</span><b>Your picks, your device</b><small>Save and remove favourites locally.</small></div><div><span>03</span><b>Community safety</b><small>Report control and clear content standards.</small></div></div>
+    </section>
+    <section class="section safety-section">
+      <div class="safety-icon">✓</div><div><div class="eyebrow">OUR CONTENT STANDARD</div><h2>Consent is non-negotiable.</h2><p>Only publish content you own or are licensed to use, featuring consenting adults aged 18+. Never upload non-consensual imagery, hidden-camera content, or anyone under 18. Reports should be reviewed promptly.</p></div><button class="btn btn-outline" id="reportSite">Report a concern</button>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand" href="#home"><span class="brand-mark">P</span> Porn<span>Picks</span></a><span>Independent demo · Not affiliated with PornPics</span><div><a href="#collections">Collections</a><button class="footer-link" id="footerReport">Report content</button></div><small>Demo artwork uses non-explicit editorial imagery. Replace only with properly licensed, lawful content.</small></footer>
+
+  <div class="modal-backdrop hidden" id="reportModal" role="dialog" aria-modal="true" aria-labelledby="reportTitle">
+    <form class="modal" id="reportForm">
+      <button type="button" class="modal-close" id="closeReport" aria-label="Close report form">×</button>
+      <div class="eyebrow">SAFETY & TRUST</div><h2 id="reportTitle">Report a concern</h2>
+      <p>Choose the issue. This static demo shows a local confirmation; it does not send a report to a server.</p>
+      <label for="reportType">Reason</label><select id="reportType" required><option value="">Select a reason</option><option>Copyright or ownership</option><option>Consent or privacy concern</option><option>Underage content concern</option><option>Broken or misleading content</option><option>Other safety issue</option></select>
+      <label for="reportDetails">Details (optional)</label><textarea id="reportDetails" rows="3" maxlength="500" placeholder="Share enough detail to identify the issue. Do not include personal information."></textarea>
+      <button class="btn btn-primary full-width" type="submit">Submit demo report</button>
+      <div id="reportMessage" class="form-message" role="status"></div>
+    </form>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>
